@@ -3,24 +3,20 @@ import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 export type Link = {
   target: {
     href: string;
-    newTab: boolean;
+    newTab?: boolean;
   };
-  textContent: {
+  content: {
     text?: string;
-    prefix?: string;
     icon?: IconDefinition;
   };
 };
 
-export type StyledProps = Link & {
+export type StyledLink = Link & {
   styles: {
     icon?: {
       className: string;
     };
     textContent?: {
-      className: string;
-    };
-    prefix?: {
       className: string;
     };
     anchor?: {
