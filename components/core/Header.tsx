@@ -7,8 +7,8 @@ export default function Header() {
       <div>{/* Logo */}</div>
 
       {/* Nav */}
-      <div>
-        <ThemeToggle />
+      <div className="hover:text-primary">
+        <ThemeToggle height="h-8" />
       </div>
     </nav>
   );

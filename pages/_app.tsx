@@ -8,8 +8,8 @@ import { defaultTheme, Theme, themes } from '$types';
 
 import { useState } from 'react';
 import { ThemeContext } from '$context/ThemeToggle';
-import Header from 'components/core/Header';
-import { getThemeFromCookie } from 'utils/theme';
+import { getThemeFromCookie } from '$utils';
+import Header from '$components/core/Header';
 
 type AppProps = { cookieTheme: Theme | null };
 type CombineProps<T> = AppProps & T;
