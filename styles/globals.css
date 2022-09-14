@@ -1,26 +1,33 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import '@fontsource/roboto/index.css';
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
-  box-sizing: border-box;
+  @apply transition-all duration-75;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   html {
-    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
   }
-  body {
-    color: white;
-    background: black;
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-base-300;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-base-content/30 border-2 border-secondary rounded-xl;
+  }
+}
+
+@layer utilities {
+  /* Class is used for development and debugining purposes. */
+  .dev {
+    border: 2px solid red;
   }
 }
