@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '$context/ThemeToggle';
 import '../../styles/ThemeToggle.module.css';
+import Cookies from 'js-cookie';
+
+const ONE_YEAR = 1000 * 86400 * 365;
 
 // TODO: Reduce this component and its styles
 export default function ThemeToggle() {
@@ -10,9 +13,15 @@ export default function ThemeToggle() {
     if (!themeContext) {
       throw new Error('Theme context must be within ThemeContextProvider');
     }
+    const nextTheme = themeContext.theme === 'dark' ? 'light' : 'dark';
+    themeContext.setTheme(nextTheme);
+    Cookies.set('theme', nextTheme, {
+      path: '/',
+      expires: new Date(new Date().getTime() + ONE_YEAR),
+    });
   };
   return (
-    <button className="dev p-1" onClick={toggleTheme}>
+    <button className="p-1" onClick={toggleTheme}>
       <svg className={'w-6'} aria-hidden="true" viewBox="0 0 24 24">
         <mask className="moon" id="moon-mask">
           <rect x="0" y="0" width="100%" height="100%" fill="white" />

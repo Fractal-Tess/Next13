@@ -30,6 +30,9 @@ const config = {
           warning: '#F38A12',
           error: '#F2215C',
         },
+        light: {
+          ...require('daisyui/src/colors/themes')['[data-theme=light]'],
+        },
       },
     ],
   },

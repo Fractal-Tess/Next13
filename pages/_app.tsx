@@ -7,9 +7,9 @@ import NextApp, {
 import { defaultTheme, Theme, themes } from '$types';
 
 import { useState } from 'react';
-import cookie from 'cookie';
 import { ThemeContext } from '$context/ThemeToggle';
 import Header from 'components/core/Header';
+import { getThemeFromCookie } from 'utils/theme';
 
 type AppProps = { cookieTheme: Theme | null };
 type CombineProps<T> = AppProps & T;
@@ -20,28 +20,21 @@ export function App({
   cookieTheme,
 }: CombineProps<NextAppProps>) {
   const [theme, setTheme] = useState<Theme>(cookieTheme || defaultTheme);
+
   return (
-    <>
+    <div className={`${theme} min-h-screen`} data-theme={theme}>
       <ThemeContext.Provider value={{ theme, setTheme }}>
         <Header />
         <Component {...pageProps} />
       </ThemeContext.Provider>
-    </>
+    </div>
   );
 }
 
 App.getInitialProps = async (
   context: AppContext
 ): Promise<CombineProps<AppInitialProps>> => {
-  const { theme } = cookie.parse(context.ctx.req?.headers.cookie || '') as {
-    theme: string | undefined;
-  };
-  let cookieTheme: Theme | null = null;
-  if (theme) {
-    if (themes.includes(theme as Theme)) {
-      cookieTheme = theme as Theme;
-    } else console.log(`Received invalid theme: ${theme}`);
-  }
+  const cookieTheme = getThemeFromCookie(context.ctx.req?.headers.cookie);
   const ctx = await NextApp.getInitialProps(context);
   return { ...ctx, cookieTheme };
 };
