@@ -7,6 +7,7 @@ export default function Anchor({ styles, target, content }: StyledLink) {
     <a
       href={target.href}
       target={target.newTab ? '_blank' : '_self'}
+      rel="noreferrer"
       className={styles.anchor?.className}
     >
       {content.text}
