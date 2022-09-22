@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <meta
           name="description"
           content="A sample description about the page"
-        ></meta>
+        />
       </Head>
       <div className="flex flex-col items-center justify-center select-none space-y-4 text-5xl">
         <h1 className="text-6xl font-bold">
