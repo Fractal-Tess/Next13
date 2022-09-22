@@ -9,6 +9,7 @@ export default function ThemeToggle({ height }: Props) {
 
   return (
     <button
+      aria-label="theme toggling button"
       className={`p-1 theme-toggle-btn`}
       onClick={() => {
         toggleTheme(tc);
