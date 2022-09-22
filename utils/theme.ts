@@ -30,7 +30,7 @@ export const toggleTheme = (themeContext: ThemeState | null) => {
   themeContext.setTheme(nextTheme);
   Cookies.set('theme', nextTheme, {
     path: '/',
-    expires: new Date(new Date().getTime() + ONE_YEAR),
+    expires: new Date(new Date().getTime() + ONE_YEAR)
   });
 };
 

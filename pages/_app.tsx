@@ -2,7 +2,7 @@ import '../styles/globals.css';
 import NextApp, {
   AppContext,
   AppInitialProps,
-  AppProps as NextAppProps,
+  AppProps as NextAppProps
 } from 'next/app';
 import { Theme } from '$types';
 
@@ -15,7 +15,7 @@ type CombineProps<T> = AppProps & T;
 export function App({
   Component,
   pageProps,
-  cookieTheme,
+  cookieTheme
 }: CombineProps<NextAppProps>) {
   return (
     <Layout cookieTheme={cookieTheme}>
