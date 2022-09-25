@@ -3,19 +3,22 @@ import Footer from '$components/core/Footer';
 import type { Theme } from '$types';
 import { PropsWithChildren } from 'react';
 import ThemeWrapper from '$components/theme/ThemeWrapper';
+import AnimateInView from '$components/animation/AnimateInView';
 
 type Props = {
   cookieTheme: Theme | null;
 } & PropsWithChildren;
 
-export default function MainLayout({ cookieTheme, children }: Props) {
+export default function MainLayout({ cookieTheme, children: page }: Props) {
   return (
     <ThemeWrapper cookieTheme={cookieTheme}>
-      <Header />
-      <div className="bg-base-200 flex-1 grid grid-cols-1 grid-rows-1">
-        {children}
-      </div>
-      <Footer />
+      <AnimateInView>
+        <div className="bg-gradient-to-t from-base-300 to-base-100 min-h-screen flex flex-col">
+          <Header />
+          {page}
+          <Footer />
+        </div>
+      </AnimateInView>
     </ThemeWrapper>
   );
 }

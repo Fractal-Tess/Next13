@@ -11,7 +11,7 @@ export default function ThemeWrapper({ children, cookieTheme }: Props) {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className={`${theme} min-h-screen flex flex-col`} data-theme={theme}>
+      <div className={theme} data-theme={theme}>
         {children}
       </div>
     </ThemeContext.Provider>
