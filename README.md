@@ -1,6 +1,7 @@
 # Next.js <img src="https://raw.githubusercontent.com/Fractal-Tess/Next.js/main/public/icon.png" width="30" align='center'/>
 
 ---
+
 #### A simple Next.js starter with a few opinionated additions.
 
 - Typescript
