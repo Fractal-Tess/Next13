@@ -1,4 +1,4 @@
-# Next.js <img src="https://raw.githubusercontent.com/Fractal-Tess/Next.js/main/public/icon.png" width="30" align='center'/>
+# Next.js <img src="https://raw.githubusercontent.com/Fractal-Tess/Next.js/main/public/logo.png" width="30" align='center'/>
 
 ---
 
