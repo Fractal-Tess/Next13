@@ -1,6 +1,6 @@
 {
   "name": "next-js",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,7 @@
     "format": "prettier --write ."
   },
   "lint-staged": {
-    "*.{ts,tsx,js,json,css}": [
+    "*.{ts,tsx,js,css}": [
       "prettier --write",
       "eslint"
     ]
@@ -32,17 +32,16 @@
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.38.0",
-    "@typescript-eslint/parser": "^5.38.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
     "autoprefixer": "^10.4.12",
     "cookie": "^0.5.0",
     "daisyui": "^2.31.0",
     "eslint": "^8.24.0",
     "eslint-config-next": "12.3.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "framer-motion": "^7.3.6",
+    "framer-motion": "^7.5.0",
     "husky": "^8.0.1",
     "js-cookie": "^3.0.1",
     "lint-staged": "^13.0.3",
