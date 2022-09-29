@@ -3,6 +3,3 @@
 
 # Minified files
 *.min.*
-
-# Eslint ctrl+s formater
-.eslintignore

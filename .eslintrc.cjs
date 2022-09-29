@@ -4,8 +4,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:json/recommended',
     'next/core-web-vitals',
+    'next',
     'prettier'
   ],
   rules: {
@@ -22,7 +22,7 @@ module.exports = {
     ]
   },
   plugins: ['@typescript-eslint', 'unused-imports'],
-  ignorePatterns: ['*.cjs'],
+  ignorePatterns: ['*.cjs', '*.min.*', '.next'],
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 2020
