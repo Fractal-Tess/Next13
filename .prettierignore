@@ -3,3 +3,6 @@
 
 # Minified files
 *.min.*
+
+# Pnpm lock file
+pnpm-lock.yaml
