@@ -18,16 +18,16 @@ export default function Nav() {
   const router = useRouter();
   return (
     <nav>
-      <ul className="flex space-x-4 ">
+      <ul className="flex space-x-4 text-primary-content font-bold text-lg">
         {navLinks.map(({ text, to }, i) => {
           return (
             <li key={i}>
               <Link href={to}>
                 <a
                   className={
-                    router.pathname === to
-                      ? 'underline decoration-primary underline-offset-4'
-                      : ''
+                    (router.pathname === to
+                      ? 'border-b-4 border-primary'
+                      : '') + ' px-1'
                   }
                 >
                   {text}

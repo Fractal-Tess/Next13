@@ -1,12 +1,13 @@
-type Props = {
-  onClick: (() => void) | undefined;
-};
-export default function ThemeToggle({ onClick }: Props) {
+import { useContext } from 'react';
+import { ThemeCtx } from './ThemeProvider';
+
+export default function ThemeToggle() {
+  const theme = useContext(ThemeCtx);
   return (
     <button
       aria-label="theme toggling button"
       className={`p-1 theme-toggle-btn`}
-      onClick={onClick}
+      onClick={theme?.toggleTheme}
     >
       <svg className="h-6" aria-hidden="true" viewBox="0 0 24 24">
         <mask className="moon origin-center " id="moon-mask">

@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react';
-import ThemeWrapper from '$layout/ThemeWrapper';
-import Header from '$layout/Header';
-import Footer from '$layout/Footer';
+import Header from '$components/header/Header';
+import Footer from '$components/footer/Footer';
 import type { Theme } from '$types';
+import ThemeProvider from '$components/theme/ThemeProvider';
 
 type Props = {
   cookieTheme: Theme | null;
@@ -10,12 +10,12 @@ type Props = {
 
 export default function BaseLayout({ cookieTheme, children: page }: Props) {
   return (
-    <ThemeWrapper cookieTheme={cookieTheme}>
+    <ThemeProvider cookieTheme={cookieTheme}>
       <div className="bg-gradient-to-t from-base-300 to-base-100 min-h-screen flex flex-col">
         <Header />
         {page}
         <Footer />
       </div>
-    </ThemeWrapper>
+    </ThemeProvider>
   );
 }

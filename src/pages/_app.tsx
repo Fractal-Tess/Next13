@@ -7,7 +7,7 @@ import NextApp, {
 import { Theme } from '$types';
 
 import { getThemeFromCookie } from '$utils';
-import BaseLayout from '$layout/BaseLayout';
+import BaseLayout from '$components/layout/BaseLayout';
 
 type AppProps = { cookieTheme: Theme | null };
 type CombineProps<T> = AppProps & T;

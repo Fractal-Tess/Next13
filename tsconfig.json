@@ -17,8 +17,6 @@
     "baseUrl": ".",
     "paths": {
       "$styles/*": ["src/styles/*"],
-      "$layout/*": ["src/layout/*"],
-      "$context/*": ["src/context/*"],
       "$components/*": ["src/components/*"],
       "$types": ["src/types/index.ts"],
       "$utils": ["src/utils/index.ts"]

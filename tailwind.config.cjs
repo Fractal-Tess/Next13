@@ -1,5 +1,5 @@
-const daisyui = require('daisyui');
 const defaultTheme = require('tailwindcss/defaultTheme');
+const daisyui = require('daisyui');
 
 /** @type {import('tailwindcss').Config} */
 const config = {
