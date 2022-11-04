@@ -2,6 +2,8 @@
 
 ---
 
+<img src="https://raw.githubusercontent.com/Fractal-Tess/Next.js/main/public/app.jpg" width="580" style="border-radius:2rem"/>
+</div>
 #### A simple Next.js starter with a few opinionated additions.
 
 - Typescript
