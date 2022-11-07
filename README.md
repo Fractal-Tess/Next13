@@ -3,7 +3,7 @@
 <div align="center">
   <img src="https://github.com/Fractal-Tess/Next.js/blob/main/public/app.jpg" width="580" style="border-radius:2rem"/>
 </div>
-#### A simple Next.js starter with a few opinionated additions.
+#### A simple Next.js-13 starter with a few opinionated additions.
 
 - Typescript
 - UI:
