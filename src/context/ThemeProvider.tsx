@@ -1,4 +1,6 @@
-import { defaultTheme, type Theme } from '$types';
+'use client';
+
+import { defaultTheme, type Theme } from '$types/Theme';
 import Cookies from 'js-cookie';
 import { PropsWithChildren, useState } from 'react';
 

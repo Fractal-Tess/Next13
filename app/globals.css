@@ -1,5 +1,5 @@
 @import '@fontsource/roboto/index.css';
-@import 'ThemeToggle.part.css';
+@import './ThemeToggle.module.css';
 
 @tailwind base;
 @tailwind components;
@@ -19,6 +19,9 @@
   }
   ::-webkit-scrollbar-thumb {
     @apply bg-base-content/30 border-2 border-secondary rounded-xl;
+  }
+  div[data-nextjs-scroll-focus-boundary] {
+    @apply flex-1 flex flex-col;
   }
 }
 

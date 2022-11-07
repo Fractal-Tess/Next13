@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { ServiceStatus } from '$types';
+import { ServiceStatus } from '$types/Service';
 
 export default function handler(
   req: NextApiRequest,

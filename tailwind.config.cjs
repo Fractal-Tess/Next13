@@ -4,7 +4,10 @@ const daisyui = require('daisyui');
 /** @type {import('tailwindcss').Config} */
 const config = {
   darkMode: 'class',
-  content: ['src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    'app/**/*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
+    'src/**/*.{js,ts,jsx,tsx}'
+  ],
 
   theme: {
     extend: {
